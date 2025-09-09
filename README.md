@@ -4,19 +4,33 @@ Small, portable CLI utilities packaged for easy install on any machine via `pipx
 
 ## Installation
 
-### Using pipx from a Release (preferred)
-1. Download or copy the direct URL of the wheel from your repo Releases, e.g. `https://your.git.host/you/nalswiss/releases/download/v0.1.0/nalswiss-0.1.0-py3-none-any.whl`.
-2. Install (one line):
-   
-   `pipx install https://your.git.host/you/nalswiss/releases/download/v0.1.0/nalswiss-0.1.0-py3-none-any.whl`
+### Using **uv** from a Release (preferred)
+- Install (wheel URL from Releases):
+  
+  `uv tool install --python python3.12 https://github.com/rexologue/nalswiss/releases/download/v0.1.0/nalswiss-0.1.0-py3-none-any.whl`
 
-3. (Optional) With integrity pinning (replace HASH):
-   
-   `pipx install "https://your.git.host/you/nalswiss/releases/download/v0.1.0/nalswiss-0.1.0-py3-none-any.whl#sha256=<HASH>"`
+- Upgrade to a newer release:
+  
+  `uv tool install --python python3.12 https://github.com/rexologue/nalswiss/releases/download/v0.1.1/nalswiss-0.1.1-py3-none-any.whl`
 
-4. Upgrade to a newer release: just run install again with the new wheel URL — pipx will replace the existing installation.
-   
-   `pipx install https://your.git.host/you/nalswiss/releases/download/v0.1.1/nalswiss-0.1.1-py3-none-any.whl`
+- Uninstall:
+  
+  `uv tool uninstall nalswiss`
+
+> Tips: If multiple Pythons are installed, keep `--python python3.12`. You can also set a default with `uv python pin`.
+
+### Alternative: pipx
+- Install: 
+  
+  `pipx install --python python3.12 --spec https://github.com/rexologue/nalswiss/releases/download/v0.1.0/nalswiss-0.1.0-py3-none-any.whl nalswiss`
+
+- Upgrade: 
+  
+  `pipx install --python python3.12 --spec https://github.com/rexologue/nalswiss/releases/download/v0.1.1/nalswiss-0.1.1-py3-none-any.whl nalswiss`
+
+- Uninstall: 
+  
+  `pipx uninstall nalswiss`
 
 > Requires Python 3.10–3.12 available on the system.
 
