@@ -1,4 +1,3 @@
-```md
 # nalswiss
 
 Small, portable CLI utilities packaged for easy install on any machine via `pipx` or `uv tool`.
@@ -60,4 +59,3 @@ Examples:
 
 ## License
 MIT
-```
